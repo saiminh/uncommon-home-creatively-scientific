@@ -37,7 +37,7 @@ function animateElems(){
   }
 }
 
-window.addEventListener('load', () => {
+window.addEventListener('DOMContentLoaded', () => {
   imageOne = document.querySelector('.uncommon-home-creatively-scientific__images figure:first-child'),
   imageTwo = document.querySelector('.uncommon-home-creatively-scientific__images figure:last-child'),
   imageOneWidth = imageOne.offsetWidth,
