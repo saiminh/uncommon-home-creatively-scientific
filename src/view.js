@@ -1,4 +1,4 @@
-let imageOne, imageTwo, imageOneWidth, imageTwoWidth;
+let imageOne, imageTwo, imageOneWidth, imageTwoWidth, fontSize;
 
 function animateElems(){
   if (motion){
@@ -38,7 +38,11 @@ window.addEventListener('DOMContentLoaded', () => {
   imageTwo = document.querySelector('.uncommon-home-creatively-scientific__images figure:last-child'),
   imageOneWidth = imageOne.offsetWidth,
   imageTwoWidth = imageTwo.offsetWidth * 2;
-
+  
+  fontSize = window.getComputedStyle(document.querySelector('.uncommon-home-creatively-scientific__title')).fontSize;
+  document.querySelector('.uncommon-home-creatively-scientific__title').style.fontSize = fontSize;
+  document.querySelector('.uncommon-home-creatively-scientific__images + .wp-block-heading').style.fontSize = fontSize;
+  
   animateElems();
 })
 
@@ -50,6 +54,11 @@ window.addEventListener('resize', () => {
     imageTwo = document.querySelector('.uncommon-home-creatively-scientific__images figure:last-child'),
     imageOneWidth = window.innerWidth * 0.55;
     imageTwoWidth = window.innerWidth * 0.55;
+    
+    fontSize = window.getComputedStyle(document.querySelector('.uncommon-home-creatively-scientific__title')).fontSize;
+    document.querySelector('.uncommon-home-creatively-scientific__images + .wp-block-heading').style.fontSize = fontSize;
+    document.querySelector('.uncommon-home-creatively-scientific__title').style.fontSize = fontSize;
+    
     animateElems();
   }, 200);
 })
