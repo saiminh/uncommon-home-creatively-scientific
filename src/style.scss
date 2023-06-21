@@ -49,4 +49,7 @@
 .uncommon-home-creatively-scientific__title {
   position: relative;
   z-index: 2;
+  @media screen and (max-width: 599px) {
+    font-size: 3.2rem;
+  }
 }

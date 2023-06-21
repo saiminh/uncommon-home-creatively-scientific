@@ -27,7 +27,7 @@ export default function Edit() {
             className: 'uncommon-home-creatively-scientific__paragraph',
           }]
         ]}
-        templateLock={'all'}
+        templateLock={false}
       />
 		</div>
 	);
